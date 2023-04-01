@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:8000')
+const socket = io.connect('https://laser-backend.onrender.com/')
 
 socket.on('connect', (data) => {
     socket.emit('join', 'Hello server from Client')   // truyền sự kiện 'joint' cho server
