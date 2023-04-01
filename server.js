@@ -14,21 +14,21 @@ app.get('/', (req, res) => {
 // BẮT CÁC SỰ KIỆN 
 io.on('connection', (client) => {
     client.on('mess', (data) => {
-        alert(data)
+        io.emit('hello', data)
     })
 
 
-    console.log('Client connecting..')
-    client.on('join', (data) => {    // bắt sự kiện 'joint' từ client
-        console.log(data)
-    })
+    // console.log('Client connecting..')
+    // client.on('join', (data) => {    // bắt sự kiện 'joint' từ client
+    //     console.log(data)
+    // })
 
-    client.on('messages', (data) => {    // bắt sự kiện 'messgases' từ client
-        client.emit('thread', data)     // truyền sự kiện 'thread' từ server lên cho client để hiển thị ra tin nhắn
+    // client.on('messages', (data) => {    // bắt sự kiện 'messgases' từ client
+    //     client.emit('thread', data)     // truyền sự kiện 'thread' từ server lên cho client để hiển thị ra tin nhắn
 
-        // broadcast: thông báo cho tất cả client connect vào server này đều đc nhận đc sự kiện 'thread'(cùng data) này
-        client.broadcast.emit('thread', data)
-    })
+    //     // broadcast: thông báo cho tất cả client connect vào server này đều đc nhận đc sự kiện 'thread'(cùng data) này
+    //     client.broadcast.emit('thread', data)
+    // })
 })
 
 server.listen(8000)
