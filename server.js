@@ -7,16 +7,22 @@ const io = require('socket.io')(server)
 
 app.use(express.static('public'))
 
-app.get('/test', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
 })
 
 // BẮT CÁC SỰ KIỆN 
 io.on('connection', (client) => {
+    client.on('mess', (data) => {
+        alert(data)
+    })
+
+
     console.log('Client connecting..')
     client.on('join', (data) => {    // bắt sự kiện 'joint' từ client
         console.log(data)
     })
+
     client.on('messages', (data) => {    // bắt sự kiện 'messgases' từ client
         client.emit('thread', data)     // truyền sự kiện 'thread' từ server lên cho client để hiển thị ra tin nhắn
 
