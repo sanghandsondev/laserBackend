@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
 io.on('connection', (client) => {
     client.on('mess', (data) => {
         io.emit('hello', data)
+        io.broadcast.emit('hello', data)
     })
 
 
