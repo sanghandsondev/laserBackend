@@ -5,10 +5,10 @@ const server = require('http').createServer(app)
 
 const io = require('socket.io')(server)
 
-app.use(express.static('public2'))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/public2/Calculator.html")
+    res.sendFile(__dirname + "/public/Calculator.html")
 })
 
 // BẮT CÁC SỰ KIỆN 

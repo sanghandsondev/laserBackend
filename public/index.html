@@ -5,25 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RealTimeChat</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Trang chủ</title>
 </head>
 
 <body>
-    <h1>Chat!</h1>
-    <form action="">
-        <input id="message" type="text" placeholder="message...">
-        <input type="submit" value="Send">
-    </form>
-
-    <ul id="thread">
-
-    </ul>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    <script src="/socket.io/socket.io.js"></script>
-
-    <script src="client.js"></script>
+    <div class="container">
+        <div id="header">
+            <header>
+                <div id="logo">
+                    <a href="./index.html">
+                        <img src="./img/logoMTA.png" alt=""></a>
+                </div>
+            </header>
+        </div>
+        <div class="main" id="body">
+            <h2 class="center">HỌC VIỆN KỸ THUẬT QUÂN SỰ</h2>
+            <p class="title">Laser cutting machine remote monitering</p>
+            <div class="text-center">
+                <img class="machine" src="./img/laser_machine.png" alt="laser_machine">
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <a href="./login.html" class="btn">Login</a>
+                </div>
+                <div class="col text-center">
+                    <a href="./Calculator.html" class="btn">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Design by Hoang - Duy (Co dien tu 17)</p>
+    </footer>
 </body>
 
 </html>

@@ -19,26 +19,7 @@ hr {
     min-height:100%;
     position:relative;
  }
- .hide {
-     display: none;
- }
- input {
-     padding: 10px;
- }
-table {
-    color: #fff;
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-   
-  }
+
 header{
     flex-basis: 50px;
     display: flex;
@@ -183,19 +164,16 @@ header{
     padding: 16.9px 0;
 }
 .p2 {
-    padding: 15.9px 0;
+    padding: 16.9px 0;
 }
 .p3 {
-    padding: 16.5px 0;
+    padding: 17.1px 0;
 }
 .p3-m {
     padding: 5.5px 0;
 }
 .p4 {
     padding: 10px 0;
-}
-.p2-m {
-    padding: 16.9px 0;
 }
 .dot__emergency {
     width: 28%;

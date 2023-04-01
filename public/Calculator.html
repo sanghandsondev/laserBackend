@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)file:///C:/Users/ADMIN/AppData/Local/Temp/Rar$EXa29188.28613/honghoang/calculator.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <script src="./FB/jquery-3.2.1.min.js"></script>
+    <script src="./FB/justgage.1.0.1.min.js"></script>
+    <script src="./FB/raphael.2.1.0.min.js"></script>
+    <script src="FC/FC1_Common.js"></script>
+    <script src="./Function.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <header>
+                <div id="logo">
+                    <a href="file:///C:/Users/ADMIN/AppData/Local/Temp/Rar$EXa29188.28613/honghoang/index.html"
+                        class="logo">
+                        <img src="./Calculator_files/logoMTA.png" alt=""></a>
+                </div>
+            </header>
+        </div>
+        <div class="main" id="body">
+            <p class="title">Màn hình giám sát máy cắt Laser từ xa</p>
+            <!--<section style="padding-top: 100px;">
+                <div class="row large-3">
+                    <div class="col text-center">
+                        <a href="#" class="btn">MONITOR</a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="#" class="btn">HISTORY</a>
+                    </div>
+                    <div class="col text-center">
+                        <a href="#" class="btn">Đăng xuất</a>
+                    </div>
+                </div>
+            </section>-->
+            <div class="log-out js-logout-btn text-center">
+                <a href="file:///C:/Users/ADMIN/AppData/Local/Temp/Rar$EXa29188.28613/honghoang/calculator.html#"
+                    class="btn">LOGOUT</a>
+            </div>
+
+            <section style="padding-top: 50px;">
+                <div class="row" style="justify-content: center;">
+
+                    <div class="">
+                        <table>
+                            <tr>
+                                <th style="padding: 6.2px;"></th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th>STT</th>
+                                <th>Thiết bị</th>
+                                <th>Đang làm việc</th>
+                                <th>Chế độ nghỉ</th>
+                                <th>Không làm việc</th>
+                                <th>Khẩn cấp</th>
+                                <th>Hết nguyên vật liệu</th>
+                                <th>Thiếu nhân công</th>
+                                <th>Chờ hàng</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td onclick="Click1()">Máy 1</td>
+                                <td>
+                                    <p id="working" class="dot "></p>
+                                </td>
+                                <td>
+                                    <p id="rest" class="dot "></p>
+                                </td>
+                                <td>
+                                    <p id="notWork" class="dot "></p>
+                                </td>
+                                <td>
+                                    <p class="dot dot__error"></p>
+                                </td>
+                                <td>
+                                    <p class="dot dot__error"></p>
+                                </td>
+                                <td>
+                                    <p class="dot dot__error"></p>
+                                </td>
+                                <td>
+                                    <p class="dot dot__error"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Máy 2</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Máy 3</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+            <section style="padding-top: 50px;" class="hide" id="computer1">
+                <div class="row">
+                    <table style="width: 10%;">
+                        <tr>
+                            <th>Máy 1</th>
+                        </tr>
+                    </table>
+                    <table style="width: 30%;">
+                        <tr>
+                            <th>Encoder 1</th>
+                            <td>
+                                <p class=""><input id="tbx_tag_Real" disabled="disabled" type="text" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Encoder 2</td>
+                            <td>
+                                <p class=""><input id="tbx_tag_Integer" disabled="disabled" type="text" /> </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cường độ dòng điện</td>
+                            <td>
+                                <p class=""><input id="tbx_tag_Byte" disabled="disabled" type="text" /></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Thời gian máy chạy</td>
+                            <td>
+                                <p class=""><input id="tbx_tag_Bool" disabled="disabled" type="text" /> </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>Design by Hoang - Duy (Co dien tu 17)</p>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="./client.js"></script>
+</body>
