@@ -5,6 +5,10 @@ const server = require('http').createServer(app)
 
 const io = require('socket.io')(server)
 
+const cors = require('cors')
+app.use(cors())
+app.options('*', cors())
+
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
